@@ -23,4 +23,8 @@ Create SuperUser
 ```
 python manage.py createsuperuser
 ```
-The blog should be available at `localhost:8000`.
+Run server on port 8000:
+```
+python manage.py runserver 8000
+```
+The blog should be available at `localhost:8000`

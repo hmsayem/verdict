@@ -23,5 +23,4 @@ Create SuperUser
 ```
 python manage.py createsuperuser
 ```
-Go to the web browser and visit `http://localhost:8000/admin`
-After all these steps , you can start testing and developing this project.
+The blog should be available at localhost:8000.

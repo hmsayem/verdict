@@ -1,0 +1,69 @@
+{% extends 'blog/base.html' %}
+{% block title %}
+    {{ post.title }}
+{% endblock %}
+{% block content %}
+    <br><br>
+    <h2 class="post-head"> {{ post.title }} </h2>
+    {{ post.date|date:'d/m/Y' }},
+    <i> By {{ post.author.first_name }} {{ post.author.last_name }} </i> <br>
+    {% if user.is_authenticated %}
+        {% if post.author.id == user.id %}<br>
+            <a href="{% url 'update_post' post.id %}"> Edit Post</a>
+            <br>
+            <a href="{% url 'delete_post' post.id %}">Delete Post</a>
+        {% endif %}
+        <hr>
+    {% endif %}
+    <p>{{ post.body|safe }}</p>
+    {% if user.is_authenticated %}
+        {% if is_liked == True %}
+            <a href="{% url 'like_post' post.pk %}">
+             <span style="font-size: 0.9rem; color: Tomato;">
+                 <i class="fas fa-heart"></i>
+            </span>
+            </a>
+            <span style="font-size: 1rem; color: Tomato; "> &nbsp;{{ likes_count }} Like{{ likes_count | pluralize }} </span>
+        {% else %}
+            <a href="{% url 'like_post' post.pk %}">
+            <span style="font-size: 0.9rem; color: Tomato;">
+                 <i class="far fa-heart"></i>
+            </span>
+            </a>
+            <span style="font-size: 1rem; color: Tomato; "> &nbsp;{{ likes_count }} Like{{ likes_count | pluralize }} </span>
+        {% endif %}
+    {% else %}
+        <a href="{% url 'login' %}">
+            <span style="font-size: 0.9rem; color: Tomato;">
+                 <i class="far fa-heart"></i>
+            </span>
+        </a>
+        <span style="font-size: 1rem; color: Tomato; "> &nbsp;{{ likes_count }} Like{{ likes_count | pluralize }} </span>
+    {% endif %}
+    &nbsp;
+    <span style="font-size: 0.9rem; color: seagreen;">
+                 <i class="far fa-comment-dots"></i>
+    </span>
+    <span style="font-size: 1rem; color: seagreen; "> &nbsp;{{ post.comments.count }} Comment{{ post.comments.count | pluralize }} </span>
+    <br>
+    {% if user.is_authenticated %}
+        <br>
+        <form method="post">
+            {% csrf_token %}
+            {{ comment_form.as_p }}
+            <input class="btn btn-outline-success btn-sm" type="submit" value="Post">
+        </form>
+    {% endif %}
+    {% if post.comments.count  > 0 %}
+        <br>
+        <h5 style="font-size: 1.2rem; color: #0f4c75;">Comments</h5>
+        {% endif %}
+        {% for comment in post.comments.all reversed %}
+          <hr style="height:5px; margin:0;"/>
+          <small style="font-size: 0.9rem"> {{ comment.body }} </small>
+          <small>
+            <footer class="blockquote-footer">by <cite title="Source Title">{{ comment.user }}</cite></footer>
+          </small>
+         <hr style="height:3px; margin:0;visibility:hidden;"/>
+        {% endfor %}
+{% endblock %}

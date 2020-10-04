@@ -1,0 +1,24 @@
+{% extends 'blog/base.html' %}
+{% block title %}
+    Edit Profile
+{% endblock %}
+{% block content %}
+
+    <div class="large-form">
+        <h1 class="title"> Edit Profile </h1>
+        <hr>
+        <br>
+        <form method="post">
+            <div class="form-group w-75">
+                {% csrf_token %}
+                {{ form.as_p }}
+            </div>
+            <button class="btn btn-outline-success"> Update Profile</button>
+        </form>
+        <br>
+        <a href="{% url 'password_change' %}">
+            <button class="btn btn-outline-danger" type="submit"> Change Password</button>
+        </a>
+    </div>
+
+{% endblock %}

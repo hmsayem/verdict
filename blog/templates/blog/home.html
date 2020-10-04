@@ -1,0 +1,52 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block title %}
+    In Queue
+{% endblock %}
+{% block content %}
+    <br><br>
+    <h2 class="title"> The Blog Log </h2>
+    <hr> <br>
+    <div class="container">
+        <div class="row">
+            {% for post in object_list %}
+                <div class="col-lg-4 mb-3">
+                    <div class="card">
+                        {% if post.header_image %}
+                            <img class="card-img-top sss"
+                                 src="{{ post.header_image.url }}"
+                                 alt="Card image cap">
+                        {% else %}
+                            <img class="card-img-top sss"
+                                 src="{% static 'images/default.png' %}"
+                                 alt="Image File">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="card-title"> {{ post.title }} </h5>
+                            <small>
+                                <span style="font-size: 0.7rem; color: Tomato;">
+                                    <i class="far fa-heart"></i>
+                                </span>
+                                &nbsp;{{ post.total_likes }}
+                                &nbsp;
+                                <span style="font-size: 0.7rem; color: seagreen;">
+                                <i class="far fa-comment-dots"></i>
+                                </span>
+                                &nbsp;{{ post.comments.count }}
+
+                            </small>
+                            <p class="card-text"><small
+                                    class="text-muted">{{ post.author.first_name }} {{ post.author.last_name }}
+                                &nbsp; [ <a href="{% url 'category' post.category %}"> {{ post.category }} </a>
+                                ]</small></p>
+                            <a href="{% url 'detail' post.id %}" class="btn btn-outline-success">Read Article</a>
+
+                        </div>
+                    </div>
+                </div>
+                </br>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

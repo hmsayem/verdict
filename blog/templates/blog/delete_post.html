@@ -1,0 +1,29 @@
+{% extends 'blog/base.html' %}
+
+
+{% block title %}
+    {% if user.is_authenticated %}
+        Delete Post
+    {% else %}
+        Please Login
+    {% endif %}
+
+{% endblock %}
+
+{% block content %}
+    <br><br>
+    {% if user.is_authenticated and post.author.id == user.id %}
+        <form method="post">
+            {% csrf_token %}
+            <div class="del-post">
+                <h4 class="confirm-message">Are you sure to delete &nbsp;"{{ post.title }}"&nbsp;?</h4>
+                <br>
+                <button class="btn btn-outline-danger">Cofirm</button>
+            </div>
+
+        </form>
+    {% else %}
+        <h3 class="deny-message">You are not allowed to do this action.</h3>
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+    {% if user.is_authenticated %}
+        Create post
+    {% else %}
+        Please Login
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+
+    <br><br>
+    {% if user.is_authenticated %}
+        <h1>Create a Blog Post </h1>
+        <hr>
+        <br>
+        <form method="post" enctype="multipart/form-data">
+
+            {% csrf_token %}
+            {{ form.media }}
+            {{ form.as_p }}
+
+            <button class="btn btn-outline-dark"> Post</button>
+        </form>
+        <br> <br>
+    {% else %}
+        <h4>Please Login</h4>
+        <br> <br>
+        <a href="{% url 'login' %}" class="btn btn-outline-dark">Login</a>
+    {% endif %}
+
+    <script>
+        var name = "{{ user.id }}";
+        document.getElementById("author").value = name;
+    </script>
+
+
+{% endblock %}

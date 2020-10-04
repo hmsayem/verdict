@@ -1,0 +1,131 @@
+.navbar-brand {
+  font-family: 'Rufina', serif;
+  font-size: 1.7rem !important;
+  padding-left: 10px;
+  padding-bottom: 5px !important;
+}
+
+.nav-space {
+  margin-right: 10px;
+}
+
+body {
+  font-family: 'Baloo Tamma 2', cursive !important;
+  font-weight: 700;
+  min-height: 100vh;
+  position: relative;
+}
+
+.base-container {
+  margin: auto;
+  padding-bottom: 5rem;
+  width: 70% !important;
+}
+
+.content {
+  padding: 0.4rem;
+}
+
+.title {
+  color: #142850;
+  font-family: 'Aclonica', sans-serif;
+  text-align: center;
+}
+
+.card-title {
+  margin-bottom: 2px !important;
+  color: #0f4c75;
+  font-weight: bold;
+}
+
+.post-head {
+  color: #142850;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 2.3rem;
+  font-weight: bold;
+}
+
+.bottom-container {
+  text-align: center;
+  background-color: #222831;
+  color: #f7f7f7;
+  padding: 10px 0 10px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.profile-link {
+  padding-left: 5px;
+  color: whitesmoke;
+}
+
+.copyright {
+  color: #679b9b;
+  font-size: 0.75rem;
+  margin-bottom: 0;
+}
+
+img {
+  width: auto !important;
+  height: 160px !important;
+}
+
+.deny-message {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10%;
+  color: firebrick;
+}
+
+.confirm-message {
+  font-weight: bold;
+  color: #142850;
+}
+
+.system-message {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10%;
+  color: seagreen;
+}
+
+.del-post {
+  padding: 5%;
+}
+
+.small-form {
+  padding: 5% 20% 5%;
+}
+
+.large-form {
+  padding: 5%;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+@media (max-width: 500px) {
+  .navbar-brand {
+    padding-left: 0;
+
+  }
+  .title {
+    font-size: 2.1rem;
+  }
+  .post-head{
+    /* font-size: 2.2rem; */
+  }
+  .base-container {
+    width: 90% !important;
+  }
+
+  .card-img-top {
+    height: 200px;
+    width: 200px;
+  }
+  .small-form {
+    padding: 5% 10% 5%;
+  }
+}

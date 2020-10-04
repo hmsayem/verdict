@@ -1,0 +1,24 @@
+{% extends 'blog/base.html' %}
+{% block title %}
+    {% if user.is_authenticated %}
+        Edit post
+    {% else %}
+        Please Login
+    {% endif %}
+{% endblock %}
+{% block content %}
+    <br><br>
+    {% if user.is_authenticated and post.author.id == user.id %}
+        <h2>Edit Post </h2>
+        <hr>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.media }}
+            {{ form.as_p }}
+            <button class="btn btn-outline-success"> Update</button>
+        </form>
+        <br><br>
+    {% else %}
+        <h3 class="deny-message">You are not allowed to do this action.</h3>
+    {% endif %}
+{% endblock %}

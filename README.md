@@ -6,7 +6,7 @@ A fully featured Django programming blog application implemented with all the be
 ## How to set up
 Clone This Project (Make Sure You Have Git Installed)
 ```
-https://github.com/mustafamuratcoskun/DjangoBlogApp.git
+https://github.com/hmsayem/In-Queue.git
 ```
 Install Dependencies
 
@@ -23,4 +23,4 @@ Create SuperUser
 ```
 python manage.py createsuperuser
 ```
-The blog should be available at localhost:8000.
+The blog should be available at `localhost:8000`.

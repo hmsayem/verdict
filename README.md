@@ -6,7 +6,7 @@ A fully featured Django programming blog application implemented with all the be
 ## How to set up
 Clone This Project (Make Sure You Have Git Installed)
 ```
-https://github.com/hmsayem/In-Queue.git
+https://github.com/hmsayem/Verdict.git
 ```
 Install Dependencies
 

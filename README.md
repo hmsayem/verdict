@@ -1,4 +1,4 @@
-# In Queue
+# Verdict
 
 ## About
 A fully featured Django programming blog application implemented with all the best practices like user authentication, adding posts, adding comments, editing, blog categories and many more.

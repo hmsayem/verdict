@@ -109,14 +109,16 @@ a {
 @media (max-width: 500px) {
   .navbar-brand {
     padding-left: 0;
-
   }
+
   .title {
     font-size: 2.1rem;
   }
-  .post-head{
+
+  .post-head {
     /* font-size: 2.2rem; */
   }
+
   .base-container {
     width: 90% !important;
   }
@@ -125,7 +127,25 @@ a {
     height: 200px;
     width: 200px;
   }
+
   .small-form {
     padding: 5% 10% 5%;
+  }
+}
+
+.social-icon {
+  font-size: 1.2rem !important;
+  color: #f6f6f6;
+  margin-left: 10px;
+}
+
+.social-icon:hover {
+  animation: frame 0.7s linear 0.01s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes frame {
+  100% {
+    color: #8785a2;
   }
 }

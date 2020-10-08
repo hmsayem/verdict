@@ -1,30 +1,37 @@
 # Verdict
+### About
+A fully featured programming blog application built with Django.
 
-## About
-A fully featured Django programming blog application implemented with all the best practices like user authentication, adding posts, adding comments, editing, blog categories and many more.
+### Features 
 
-## How to set up
-Clone This Project (Make Sure You Have Git Installed)
-```
-https://github.com/hmsayem/Verdict.git
-```
-Install Dependencies
+- User Registration
+- User Login & Logout
+- Create, Update, Edit & Delete Posts
+- Blog Categories
+- Comments
+- Likes
+- User Password Change
+- User Setting Change
 
+### How to set up
+##### Clone project & Install Requirements
+> Make sure you have already installed python3 and git.
 ```
+git clone https://github.com/hmsayem/Verdict.git && cd Verdict
 pip install -r requirements.txt
 ```
-
-Set Database (Make Sure you are in directory same as manage.py)
+##### Migrate & Collect Static
 ```
-python manage.py makemigrations
 python manage.py migrate
+python manage.py collectstatic
 ```
-Create SuperUser
+##### Create Admin User
 ```
 python manage.py createsuperuser
 ```
-Run server on port 8000:
+##### Run Server
 ```
-python manage.py runserver 8000
+python manage.py runserver
 ```
-The blog should be available at `localhost:8000`
+>  The blog should be available at `localhost:8000`. You can login as an admin at `http://localhost:8000/admin`.
+

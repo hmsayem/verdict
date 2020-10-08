@@ -1,5 +1,5 @@
 .navbar-brand {
-  font-family: 'Rufina', serif;
+  font-family: 'Federo', sans-serif;
   font-size: 1.7rem !important;
   padding-left: 10px;
   padding-bottom: 5px !important;
@@ -106,17 +106,31 @@ a {
   text-decoration: none !important;
 }
 
-@media (max-width: 500px) {
+.social-icon {
+  font-size: 1.2rem !important;
+  color: #f6f6f6;
+  margin-left: 10px;
+}
+
+.social-icon:hover {
+  animation: frame 0.7s linear 0.01s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes frame {
+  100% {
+    color: #8785a2;
+  }
+}
+
+@media (max-width: 992px) {
   .navbar-brand {
     padding-left: 0;
+    font-size: 1.5rem !important;
   }
 
   .title {
     font-size: 2.1rem;
-  }
-
-  .post-head {
-    /* font-size: 2.2rem; */
   }
 
   .base-container {
@@ -133,19 +147,8 @@ a {
   }
 }
 
-.social-icon {
-  font-size: 1.2rem !important;
-  color: #f6f6f6;
-  margin-left: 10px;
-}
-
-.social-icon:hover {
-  animation: frame 0.7s linear 0.01s 1;
-  animation-fill-mode: forwards;
-}
-
-@keyframes frame {
-  100% {
-    color: #8785a2;
+@media (max-width: 500px) {
+  .base-container {
+    width: 80% !important;
   }
 }

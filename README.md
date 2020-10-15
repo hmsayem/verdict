@@ -1,8 +1,8 @@
 # Verdict
 ### About
-A fully featured programming blog application built with Django.
-
-### Features 
+A fully featured blog application built with Django.
+[Click here](http://hmsayem.pythonanywhere.com) to view a live version of the website.
+### Features
 
 - User Registration
 - User Login & Logout
@@ -10,8 +10,7 @@ A fully featured programming blog application built with Django.
 - Blog Categories
 - Comments
 - Likes
-- User Password Change
-- User Setting Change
+- User Setting
 
 ### How to set up
 ##### Clone project & Install Requirements
@@ -34,4 +33,3 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 >  The blog should be available at `localhost:8000`. You can login as an admin at `http://localhost:8000/admin`.
-

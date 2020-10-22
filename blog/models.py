@@ -12,7 +12,8 @@ class Category(models.Model):
         return self.name
 
     @staticmethod
-    def get_absolute_url():  # Add New Post
+    def get_absolute_url():
+        # Add New Post
         # return reverse('detail', args=(str(self.id)))
         return reverse('home')
 
@@ -24,6 +25,7 @@ class Post(models.Model):
     body = RichTextField(blank=True, null=True)
     date = models.DateField(auto_now_add=True)
     category = models.CharField(max_length=250, default='Miscellaneous')
+
     likes = models.ManyToManyField(User, related_name='post_likes')
 
     def total_likes(self):

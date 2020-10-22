@@ -29,7 +29,7 @@ body {
 .title {
   color: #142850;
   font-family: 'Aclonica', sans-serif;
-  text-align: center;
+  text-align: left;
 }
 
 .card-title {
@@ -99,7 +99,7 @@ img {
 }
 
 .large-form {
-  padding: 5%;
+  padding: 5% 0% 5% 15%;
 }
 
 a {

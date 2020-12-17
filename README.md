@@ -2,6 +2,7 @@
 ### About
 A fully featured blog application built with Django.
 [Click here](http://hmsayem.pythonanywhere.com) to view a live version of the website.
+
 ### Features
 
 - User Registration
@@ -11,6 +12,10 @@ A fully featured blog application built with Django.
 - Comments
 - Likes
 - User Setting
+
+### Screenshot
+
+<img src="media/demo.gif">
 
 ### How to set up
 ##### Clone project & Install Requirements

@@ -13,9 +13,9 @@ A fully featured blog application built with Django.
 - Likes
 - User Setting
 
-### Screenshot
+### Demo
 
-<img src="media/demo.gif">
+<img src="media/images/demo.gif">
 
 ### How to set up
 ##### Clone project & Install Requirements

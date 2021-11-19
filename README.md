@@ -1,7 +1,6 @@
 # Verdict
 ### About
 A fully featured blog application built with Django.
-[Click here](http://hmsayem.pythonanywhere.com) to view a live version of the website.
 
 ### Features
 
